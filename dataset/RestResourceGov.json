@@ -1,0 +1,26 @@
+{
+	"name": "RestResourceGov",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "world_bank_open_api",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"relativePath": "/v2/en/indicator/NE.CON.GOVT.CD",
+				"queryString": "format=xml"
+			}
+		},
+		"parameters": {
+			"relativePath": {
+				"type": "string",
+				"defaultValue": "/v2/en/indicator/NE.CON.GOVT.CD"
+			},
+			"queryString": {
+				"type": "string",
+				"defaultValue": "format=xml"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
