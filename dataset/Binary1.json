@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "gov.xml",
+				"fileName": "gov.zip",
 				"folderPath": "gov",
 				"container": "test-data"
 			},

@@ -1,0 +1,17 @@
+{
+	"name": "API_BIN_GOV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BankOpenAPI",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "/v2/en/indicator/NE.CON.GOVT.CD?downloadformat=xml"
+			}
+		}
+	}
+}
