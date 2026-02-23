@@ -13,6 +13,9 @@
 				"fileName": "gov.xml",
 				"folderPath": "gov",
 				"container": "test-data"
+			},
+			"compression": {
+				"type": "gzip"
 			}
 		}
 	}

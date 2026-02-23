@@ -3,24 +3,13 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "world_bank_open_api",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"relativePath": "/v2/en/indicator/NE.CON.GOVT.CD",
-				"queryString": "format=xml"
-			}
-		},
-		"parameters": {
-			"relativePath": {
-				"type": "string",
-				"defaultValue": "/v2/en/indicator/NE.CON.GOVT.CD"
-			},
-			"queryString": {
-				"type": "string",
-				"defaultValue": "format=xml"
-			}
+			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "/v2/en/indicator/NE.CON.GOVT.CD?downloadformat=xml"
+		},
 		"schema": []
 	}
 }

@@ -36,11 +36,7 @@
 				"inputs": [
 					{
 						"referenceName": "RestResourceGov",
-						"type": "DatasetReference",
-						"parameters": {
-							"relativePath": "/v2/en/indicator/NE.CON.GOVT.CD",
-							"queryString": "format=xml"
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
