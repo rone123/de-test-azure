@@ -1,0 +1,18 @@
+{
+	"name": "Blob_PoP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Blob_storage_raw_file",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "pop.zip",
+				"folderPath": "pop"
+			}
+		}
+	}
+}

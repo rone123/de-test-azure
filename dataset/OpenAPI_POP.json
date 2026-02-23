@@ -1,0 +1,17 @@
+{
+	"name": "OpenAPI_POP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BankOpenAPI",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "V2/EN/INDICATOR/SP.POP.TOTL?DOWNLOADFORMAT=XML"
+			}
+		}
+	}
+}
