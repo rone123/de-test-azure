@@ -11,7 +11,8 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "pop.zip",
-				"folderPath": "pop"
+				"folderPath": "pop",
+				"container": "test-data"
 			}
 		}
 	}
