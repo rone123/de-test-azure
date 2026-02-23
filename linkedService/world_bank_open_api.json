@@ -1,0 +1,27 @@
+{
+	"name": "world_bank_open_api",
+	"properties": {
+		"description": "Ingest data gov expenture and pop from open api",
+		"parameters": {
+			"relativePath": {
+				"type": "string",
+				"defaultValue": "/v2/en/indicator/NE.CON.GOVT.CD"
+			},
+			"queryString": {
+				"type": "string",
+				"defaultValue": "format=xml"
+			}
+		},
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.worldbank.org/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
