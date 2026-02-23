@@ -47,7 +47,7 @@
 				]
 			},
 			{
-				"name": "Copy data1",
+				"name": "get_pop_data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
