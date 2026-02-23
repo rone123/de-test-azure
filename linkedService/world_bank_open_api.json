@@ -15,7 +15,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://api.worldbank.org/",
+			"url": "https://api.worldbank.org",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		},
