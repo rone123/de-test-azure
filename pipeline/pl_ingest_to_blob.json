@@ -5,8 +5,6 @@
 			{
 				"name": "get_gov_data",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -51,8 +49,6 @@
 			{
 				"name": "get_pop_data",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -95,9 +91,16 @@
 				]
 			},
 			{
-				"name": "Azure Function1",
+				"name": "Process_Expenditure",
 				"type": "AzureFunctionActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "get_gov_data",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -111,6 +114,38 @@
 					"body": {
 						"blob_name": "gov/gov.zip",
 						"table": "raw.worldbank_expenditure"
+					},
+					"method": "POST"
+				},
+				"linkedServiceName": {
+					"referenceName": "ProcessTotalExp",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Process_Population",
+				"type": "AzureFunctionActivity",
+				"dependsOn": [
+					{
+						"activity": "get_pop_data",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"functionName": "process_blob",
+					"body": {
+						"blob_name": "pop/pop.zip",
+						"table": "raw.worldbank_population"
 					},
 					"method": "POST"
 				},
